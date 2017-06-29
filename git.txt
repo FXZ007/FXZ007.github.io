@@ -1,0 +1,507 @@
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git branch
+  a
+* master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git clone https://github.com/wangnaiwen/RecyclerViewRefresh.git
+Cloning into 'RecyclerViewRefresh'...
+remote: Counting objects: 79, done.
+remote: Total 79 (delta 0), reused 0 (delta 0), pack-reused 79
+Unpacking objects: 100% (79/79), done.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git branch
+  a
+* master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git status
+
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    _config.yml
+        deleted:    index.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        RecyclerViewRefresh/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ help
+GNU bash, version 4.3.46(2)-release (x86_64-pc-msys)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                            history [-c] [-d offset] [n] or hist>
+ (( expression ))                        if COMMANDS; then COMMANDS; [ elif C>
+ . filename [arguments]                  jobs [-lnprs] [jobspec ...] or jobs >
+ :                                       kill [-s sigspec | -n signum | -sigs>
+ [ arg... ]                              let arg [arg ...]
+ [[ expression ]]                        local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]          logout [n]
+ bg [job_spec ...]                       mapfile [-n count] [-O origin] [-s c>
+ bind [-lpsvPSVX] [-m keymap] [-f file>  popd [-n] [+N | -N]
+ break [n]                               printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]       pushd [-n] [+N | -N | dir]
+ caller [expr]                           pwd [-LPW]
+ case WORD in [PATTERN [| PATTERN]...)>  read [-ers] [-a array] [-d delim] [->
+ cd [-L|[-P [-e]] [-@]] [dir]            readarray [-n count] [-O origin] [-s>
+ command [-pVv] command [arg ...]        readonly [-aAf] [name[=value] ...] o>
+ compgen [-abcdefgjksuv] [-o option]  >  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] >  select NAME [in WORDS ... ;] do COMM>
+ compopt [-o|+o option] [-DE] [name ..>  set [-abefhkmnptuvxBCHP] [-o option->
+ continue [n]                            shift [n]
+ coproc [NAME] command [redirections]    shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=v>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                  suspend [-f]
+ disown [-h] [-ar] [jobspec ...]         test [expr]
+ echo [-neE] [arg ...]                   time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [na>  times
+ eval [arg ...]                          trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argume>  true
+ exit [n]                                type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or ex>  typeset [-aAfFgilrtux] [-p] name[=va>
+ false                                   ulimit [-SHabcdefilmnpqrstuvxT] [lim>
+ fc [-e ename] [-lnr] [first] [last] o>  umask [-p] [-S] [mode]
+ fg [job_spec]                           unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMAND>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMAN>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name >  variables - Names and meanings of so>
+ getopts optstring name [arg]            wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name >  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]               { COMMANDS ; }
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git -help
+Unknown option: -help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git branch -a
+  a
+* master
+  remotes/origin/master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ checkout a
+bash: checkout: command not found
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ checkout - a
+bash: checkout: command not found
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ checkout -a
+bash: checkout: command not found
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git branch
+  a
+* master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git checkout -a
+error: unknown switch `a'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given                                                                                                        ref
+    --progress            force progress reporting
+
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git checkout -b a
+fatal: A branch named 'a' already exists.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git checkout -b a
+fatal: A branch named 'a' already exists.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git checkout -b c
+D       _config.yml
+D       index.md
+Switched to a new branch 'c'
+
+Feng@mycomputer MINGW64 /e/Git_Repository (c)
+$ git branch
+  a
+* c
+  master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (c)
+$ git switch -a
+git: 'switch' is not a git command. See 'git --help'.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (c)
+$ git switch a
+git: 'switch' is not a git command. See 'git --help'.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (c)
+$ git branch
+  a
+* c
+  master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (c)
+$ git checkout a
+D       _config.yml
+D       index.md
+Switched to branch 'a'
+
+Feng@mycomputer MINGW64 /e/Git_Repository (a)
+$ git branch
+* a
+  c
+  master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (a)
+$ git switch -a
+git: 'switch' is not a git command. See 'git --help'.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (a)
+$ git checkout -a
+error: unknown switch `a'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given                                                                                                        ref
+    --progress            force progress reporting
+
+
+Feng@mycomputer MINGW64 /e/Git_Repository (a)
+$ git branch
+* a
+  c
+  master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (a)
+$ git checkout -master
+error: unknown switch `a'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given                                                                                                        ref
+    --progress            force progress reporting
+
+
+Feng@mycomputer MINGW64 /e/Git_Repository (a)
+$ git checkout master
+D       _config.yml
+D       index.md
+Switched to branch 'master'
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ vi E:\Git_Repository\RecyclerViewRefresh\app\src\main\java\com\study\wnw\recyc                                                                                                       lerviewrefresh\MainActivity.java
+
+legit branch
+  a
+  c
+* master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Fegit branch
+  a
+  c
+* master
+
+$ vim E:\Git_Repository\RecyclerViewRefresh\app\src\main\java\com\study\wnw\recy                                                                                                       clerviewrefresh
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git branch
+  a
+  c
+* master
+
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ vi https://github.com/wangnaiwen/RecyclerViewRefresh/tree/master/app/src/main/                                                                                                       res/layout/activity_main.xml
+
+[已修改但尚未保存]
+
+请按 ENTER 或其它命令继续
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git clone https://github.com/FXZ007/FXZ007.github.io.git
+Cloning into 'FXZ007.github.io'...
+remote: Counting objects: 6, done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 6
+Unpacking objects: 100% (6/6), done.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ ls
+E:Git_RepositoryRecyclerViewRefreshappsrcmainjavacomstudywnwrecyclerviewrefresh
+E:Git_RepositoryRecyclerViewRefreshappsrcmainjavacomstudywnwrecyclerviewrefreshM                                                                                                       ainActivity.java
+FXZ007.github.io/
+RecyclerViewRefresh/
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ vi https://github.com/FXZ007/FXZ007.github.io/_config.yml
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git init
+Reinitialized existing Git repository in E:/Git_Repository/.git/
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$  git branch -r
+  origin/master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git pull E:\Git_Repository\RecyclerViewRefresh
+fatal: 'E:Git_RepositoryRecyclerViewRefresh' does not appear to be a git reposit                                                                                                       ory
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git pull E:\Git_Repository\RecyclerViewRefresh to https://github.com/FXZ007/FX                                                                                                       Z007.github.io
+fatal: Invalid refspec 'https://github.com/FXZ007/FXZ007.github.io'
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git pull E:\Git_Repository\RecyclerViewRefresh to https://github.com/FXZ007/FX                                                                                                       Z007.github.io\
+>
+fatal: Invalid refspec 'https://github.com/FXZ007/FXZ007.github.io'
+
+
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$  ssh-keygen -t rsa -C "18519187332@1623.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Feng/.ssh/id_rsa):
+/c/Users/Feng/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Feng/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Feng/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:i45FxP0BRgVurZo0vrh7bXnYv5QDzfPjYbE1HUuR9W8 18519187332@1623.com
+The key's randomart image is:
++---[RSA 2048]----+
+|       .=o.    .+|
+|     . + o     .o|
+|      o + o    o.|
+|     . . o +  . =|
+|      + S o + .oE|
+|     + = . . + =.|
+|      *..+  + *  |
+|     =..= o. + o |
+|    =+o. . .o..  |
++----[SHA256]-----+
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ ssh -T git@github.com
+
+The authenticity of host 'github.com (192.30.255.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? Host key verification fai                                                                                                       led.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.255.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,192.30.255.112' (RSA) to the list of know                                                                                                       n hosts.
+Hi FXZ007! You've successfully authenticated, but GitHub does not provide shell                                                                                                        access.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ ls
+E:Git_RepositoryRecyclerViewRefreshappsrcmainjavacomstudywnwrecyclerviewrefresh
+E:Git_RepositoryRecyclerViewRefreshappsrcmainjavacomstudywnwrecyclerviewrefreshM                                                                                                       ainActivity.java
+FXZ007.github.io/
+RecyclerViewRefresh/
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git config --global user.name "FXZ007.github.io"
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git config --global user.email "18519187332@163.com "
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$  git remote add origin git@github.com:FXZ007.github.io/FXZ007.github.io.git
+fatal: remote origin already exists.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ ls
+E:Git_RepositoryRecyclerViewRefreshappsrcmainjavacomstudywnwrecyclerviewrefresh
+E:Git_RepositoryRecyclerViewRefreshappsrcmainjavacomstudywnwrecyclerviewrefreshM                                                                                                       ainActivity.java
+FXZ007.github.io/
+RecyclerViewRefresh/
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ cd .git
+
+Feng@mycomputer MINGW64 /e/Git_Repository/.git (GIT_DIR!)
+$ ls
+COMMIT_EDITMSG  description  gitk.cache  hooks/  info/  objects/     refs/
+config          FETCH_HEAD   HEAD        index   logs/  packed-refs
+
+Feng@mycomputer MINGW64 /e/Git_Repository/.git (GIT_DIR!)
+$ vi config
+
+Feng@mycomputer MINGW64 /e/Git_Repository/.git (GIT_DIR!)
+$ ls
+COMMIT_EDITMSG  description  gitk.cache  hooks/  info/  objects/     refs/
+config          FETCH_HEAD   HEAD        index   logs/  packed-refs
+
+Feng@mycomputer MINGW64 /e/Git_Repository/.git (GIT_DIR!)
+$ cd ..
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ ls
+E:Git_RepositoryRecyclerViewRefreshappsrcmainjavacomstudywnwrecyclerviewrefresh
+E:Git_RepositoryRecyclerViewRefreshappsrcmainjavacomstudywnwrecyclerviewrefreshM                                                                                                       ainActivity.java
+FXZ007.github.io/
+RecyclerViewRefresh/
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git add RecyclerViewRefresh
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git commit -m "first commit"
+[master 998595d] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 160000 RecyclerViewRefresh
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git push origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:wq
+
+
+
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com/': remote: Anonymous access to FXZ007/FXZ007.gi                                                                                                       thub.io.git denied.
+fatal: Authentication failed for 'https://github.com/FXZ007/FXZ007.github.io.git                                                                                                       /'
+
+
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ :wq
+bash: :wq: command not found
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git push origin master
+Everything up-to-date
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git push origin master
+Everything up-to-date
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
