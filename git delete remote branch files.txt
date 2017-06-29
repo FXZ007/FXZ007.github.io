@@ -1,0 +1,74 @@
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git rm -r --cached a.java
+rm 'a.java'
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git commit -m "a.java"
+[master aa56e14] a.java
+ 1 file changed, 100 deletions(-)
+ delete mode 100644 a.java
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$    git push --set-upstream origin master
+
+
+
+
+
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 224 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/FXZ007/FXZ007.github.io.git
+   ccf490c..aa56e14  master -> master
+Branch master set up to track remote branch master from origin.
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git rm -r --cached RecyclerViewRefresh
+rm 'RecyclerViewRefresh'
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git commit -m "RecyclerViewRefresh"
+[master 80cfbfe] RecyclerViewRefresh
+ 1 file changed, 1 deletion(-)
+ delete mode 160000 RecyclerViewRefresh
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$ git push
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 233 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/FXZ007/FXZ007.github.io.git
+   aa56e14..80cfbfe  master -> master
+
+Feng@mycomputer MINGW64 /e/Git_Repository (master)
+$
